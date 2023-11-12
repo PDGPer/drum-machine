@@ -15,7 +15,7 @@ const App = () => {
               key={index}
               audioName={drumPadContent.audioName}
               buttonKey={drumPadContent.buttonKey}
-              emoji={drumPadContent.emoji}
+              // emoji={drumPadContent.emoji}
               phrase={drumPadContent.phrase}
             />
           ))}

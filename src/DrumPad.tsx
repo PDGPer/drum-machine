@@ -6,12 +6,12 @@ const drumPadClasses =
 const DrumPad = ({
   audioName,
   buttonKey,
-  emoji,
+  // emoji,
   phrase,
 }: {
   audioName: string;
   buttonKey: string;
-  emoji: string;
+  //emoji: string;
   phrase: string;
 }) => {
   const playAudio = (event: React.MouseEvent<HTMLDivElement>) => {
@@ -56,7 +56,7 @@ const DrumPad = ({
         className="clip"
         id={buttonKey}
       />
-      {buttonKey + " " + emoji}
+      {buttonKey}
     </div>
   );
 };
