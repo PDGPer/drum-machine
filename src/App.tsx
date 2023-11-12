@@ -16,10 +16,16 @@ const App = () => {
               audioName={drumPadContent.audioName}
               buttonKey={drumPadContent.buttonKey}
               emoji={drumPadContent.emoji}
+              phrase={drumPadContent.phrase}
             />
           ))}
 
-          <div id="display"></div>
+          <div
+            id="display"
+            className="mx-auto my-auto mt-[10%] text-orange-100"
+          >
+            ...
+          </div>
         </div>
       </div>
     </div>
