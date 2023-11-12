@@ -28,6 +28,14 @@ const DrumPad = ({
     const handleKeyDown = (event: KeyboardEvent) => {
       const displayElement = document.getElementById("display");
       if (event.key.toUpperCase() === buttonKey) {
+        // Add more intense orange to button
+        const buttonElement = document.getElementById(audioName);
+        buttonElement?.classList.add("bg-orange-300");
+        // Remove intense orange from button
+        setTimeout(() => {
+          buttonElement?.classList.remove("bg-orange-300");
+        }, 150);
+        // Play audio and update the display
         const audioElement = document.getElementById(
           buttonKey
         ) as HTMLAudioElement;
@@ -37,13 +45,11 @@ const DrumPad = ({
         }
       }
     };
-
     window.addEventListener("keydown", handleKeyDown);
-
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [buttonKey, phrase]);
+  }, []);
 
   return (
     <div
