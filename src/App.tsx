@@ -5,10 +5,10 @@ import drumPadContents from "./drumPadContents";
 const App = () => {
   return (
     <div className="flex justify-center items-center h-screen">
-      <div className="flex justify-center items-center w-[50%] min-w-[300px] max-w-[800px] aspect-square">
+      <div className="flex justify-center items-center w-[50%] min-w-[300px] max-w-[500px] aspect-square">
         <div
           id="drum-machine"
-          className="flex flex-wrap w-full h-full bg-gray-800 text-gray-800 p-[3%] text-[25px] xl:text-[50px] sm:text-[4vw] rounded-lg font-sans font-bold"
+          className="flex flex-wrap w-full h-full bg-gray-800 text-gray-800 p-[3%] text-[20px] xl:text-[37px] sm:text-[3vw] rounded-lg font-sans font-bold"
         >
           {drumPadContents.map((drumPadContent, index) => (
             <DrumPad
@@ -22,7 +22,7 @@ const App = () => {
 
           <div
             id="display"
-            className="mx-auto my-auto mt-[10%] text-orange-100"
+            className="mx-auto my-auto mt-[10%] text-orange-100 "
           >
             ...
           </div>

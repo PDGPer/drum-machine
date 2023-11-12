@@ -17,21 +17,23 @@ const DrumPad = ({
   const playAudio = (event: React.MouseEvent<HTMLDivElement>) => {
     const parentDiv = event.currentTarget;
     const audioElement = parentDiv.querySelector("audio");
-    if (audioElement) {
+    const displayElement = document.getElementById("display");
+    if (audioElement && displayElement) {
       audioElement.play();
-      document.getElementById("display").innerText = phrase;
+      displayElement.innerText = phrase;
     }
   };
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
+      const displayElement = document.getElementById("display");
       if (event.key.toUpperCase() === buttonKey) {
         const audioElement = document.getElementById(
           buttonKey
         ) as HTMLAudioElement;
-        if (audioElement) {
+        if (audioElement && displayElement) {
           audioElement.play();
-          document.getElementById("display").innerText = phrase;
+          displayElement.innerText = phrase;
         }
       }
     };
@@ -41,7 +43,7 @@ const DrumPad = ({
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [buttonKey]);
+  }, [buttonKey, phrase]);
 
   return (
     <div
