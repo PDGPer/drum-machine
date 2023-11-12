@@ -1,27 +1,13 @@
-# React + TypeScript + Vite
+# drum-machine aka Tactical Marine Soundboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Soundboard built in React with Dawn of War tactical marine barks.
 
-Currently, two official plugins are available:
+## Goals
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Another of my pending fCC challenges that I'm using to mess around with Vite, Tailwind and Codeium. Instead of playing the suggested sounds clips, I got some Dawn of War barks so I can use this thing to annoy friends during calls.
 
-## Expanding the ESLint configuration
+## Conclusion
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+A simple but sort of time-consuming challenge. Made an extra effort to keep the CSS responsive using Tailwind so I could get more into it. Kept the code as DRY as possible.
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Don't know if they've made significant changes to Codeium, but it has been the most helpful I've seen it so far. Code suggestions took context into consideration and spared me a lot of googling and typing. Still made mistakes, but nothing too hard to catch.
